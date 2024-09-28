@@ -129,7 +129,8 @@ const processPollResults = async (
 ) => {
   const pollResult = (await pollApi(
     contentLocation as string,
-    accessToken
+    accessToken,
+    30000
   )) as {
     output: Array<{
       type: keyof typeof RESOURCE_TYPE_KEY_MAPPING;
