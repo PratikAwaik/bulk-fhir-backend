@@ -1,7 +1,10 @@
+import dotenv from "dotenv";
 import express from "express";
 
 // controllers
 import * as jwksController from "./controllers/jwks";
+
+dotenv.config();
 
 const app = express();
 const PORT = 3000;
